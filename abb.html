@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+	<title>The Amazing Brick Breaker</title>
+    <link href="css/abb_css.css" rel="stylesheet" type="text/css"><!-- CSS for all pages -->
+	<script type="text/javascript" src="js/abb.js"></script><!-- Main JavaScript File -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script><!-- JQuery Toolkit -->  
+	<script type="text/javascript" src="js/modernizr.js"></script><!-- modernizr library -->
+    <script type="text/javascript" src="js/scoreboard.js"></script><!-- JS file -->
+    <script type="text/javascript" src="js/twitter_abb.js"></script><!-- high scores to twitter -->
+    <script type="text/javascript" src="js/history.js"></script><!-- External History API -->
+    <script type="text/javascript" src="js/rotate.js"></script><!-- Uses Google rotate api to rotate specific image -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/title_icon_2.ico"/><!-- Title Icon -->
+</head>
+
+
+<body onLoad="onLD()"><!--Starts the game functionality code-->
+	<nav>
+    	<ul id="navigation"><!--HTML5 navigation-->
+    		<li class="trborder"><a href="index.html">Home</a></li>
+  			<li class="current"><a href="abb.html">The Amazing Brick Breaker</a></li>
+  			<li><a href="scoreboard.html">Score Board</a></li>
+        </ul>
+	</nav><!-- Close Nav -->
+    <img src="images/magic_ball.png" width="150" height="120" id="glowball" alt="Glowball"/>
+    <img src="images/fire.png" width="500" height="100" class="abb-image" alt="Fire"/>
+    <div class="actions">
+      		</div>
+    <div id="scores">
+    	<h3>Your Latest Scores</h3>
+      		<ul id="score_list"> <!--list of names added-->
+      		</ul> 	
+    </div>
+	<canvas id="background"></canvas><!--HTML5 canvas for background-->
+	<canvas id="gamewindow"></canvas><!--HTML5 canvas for gamewindow-->
+	<script type="text/javascript" src="js/block_layers.js"></script><!-- Layers for the number of hits it takes to break the blocks -->
+		<div id="ball"></div><!-- The ball -->
+		<div id="racket"></div>
+	<script type="text/javascript" src="js/game_objects.js"></script>
+    <!-- SCORES DISPLAY -->
+			<form action="#" name="summary" id="score">
+				<p>Balls Left:<input type="text" name="ballsleft" size=1 value = "3" ></p><!-- Value set to 3 due to 3 balls being the limit till game over -->
+				<p>Time:<input type="text" name="seconds" size=5 value = "0" ></p>
+				<p>Bricks Destroyed:<input type="text" name="destroyed" size=5 value = "0" ></p>
+				<p>Score:<input type="text" name="score" size=5 value = "0" ></p>
+            </form>
+            <form action="#" id="new">
+           	 	<p>Your Name:<input type="text" name="player_name" placeholder="Enter Name" ></p>
+                <input type="submit" value="Save Score to Scoreboard" id="save"/>
+            </form>
+			<!-- Clear button -->
+            
+            
+    <!-- SHOWN AND HIDDEN TEXT CONTENT -->
+	<script type="text/javascript" src="js/game_clear.js"></script>
+	<script type="text/javascript" src="js/game_over.js"></script>
+	<script type="text/javascript" src="js/game_info.js"></script>
+    
+    <!-- Theme buttons -->
+    <div id="colours">Change Theme</div>
+    <div id="fiery"><button type="button" onClick="redFunction()"></button></div>
+    <div id="natural"><button type="button" onClick="naturalFunction()"></button></div>
+    <div id="gold"><button type="button" onClick="goldFunction()"></button></div>
+    <div id="purple"><button type="button" onClick="purpleFunction()"></button></div>
+    <div id="blue"><button type="button" onClick="blueFunction()"></button></div>
+    <div id="pink"><button type="button" onClick="pinkFunction()"></button></div>
+    <div id="simple"><button type="button" onClick="simple()">Simple</button></div>
+    <div id="block"><button type="button" onClick="block()">block</button></div>
+    <div id="normal"><button type="button" onClick="normal()">Iceburg</button></div>
+    
+    <!--Twitter scores-->
+    <a class="twitter-score"><img src="images/twitter_icon.png" width="15" height="15" alt="twitter score">Tweet your scores on Twitter</a>
+     
+    <!--Twitter Share button-->
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+	<!-- Navigational Buttons -->
+	<button class="back1" onClick="history.back()"><img src="images/back.fw.png" width="20" height="20" alt="back"></button>
+    <button class="forward1" onClick="history.forward()"><img src="images/forward.fw.png" width="20" height="20" alt="forward"></button>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Score Board</title>
+    <link href="css/abb_css.css" rel="stylesheet" type="text/css"><!-- CSS for all pages -->
+    <script type="text/javascript" src="js/abb.js"></script><!-- Main JavaScript File -->
+    <script type="text/javascript" src="js/history.js"></script><!-- External History API -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script><!-- JQuery Toolkit -->
+	<script type="text/javascript" src="js/modernizr.js"></script><!-- modernizr library -->
+    <script type="text/javascript" src="js/main_scoreboard.js"></script><!-- JS file -->
+    <script type="text/javascript" src="js/rotate.js"></script><!-- Uses Google rotate api to rotate specific image -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/title_icon.ico" /><!-- Title Icon -->
+</head>
+
+<body>
+	<nav><!--HTML5 navigation-->
+    	<ul>
+    		<li class="trborder"><a href="index.html">Home</a></li>
+  			<li><a href="abb.html">The Amazing Brick Breaker</a></li>
+  			<li class="current"><a href="scoreboard.html">Score Board</a></li>
+        </ul>
+	</nav><!-- Close Nav -->
+    <img src="images/magic_ball.png" width="150" height="120" id="glowball" alt="Glowball"/>
+    <img src="images/fire.png" width="1250" height="300" class="home-image" alt="Fire"/>
+	<canvas id="background"></canvas><!--HTML5 canvas for background-->
+    <div id="main_scores">
+       	<h2>Score Board - All your Scores</h2>
+        	<p>Name: Score | Balls Left | Time | Blocks Destroyed</p>
+      			<ul id="score_list"> <!--list of names added-->
+      			</ul> 	
+    </div>
+    <!-- Navigational Buttons -->
+	<button class="back3" onClick="history.back()"><img src="images/back.fw.png" width="20" height="20" alt="back"></button>
+    <button class="forward3" onClick="history.forward()"><img src="images/forward.fw.png" width="20" height="20" alt="forward"></button>
+</body>
+</html>
